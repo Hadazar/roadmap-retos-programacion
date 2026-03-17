@@ -1,0 +1,23 @@
+name: Stats
+
+on:
+  push:
+    branches: [main]
+
+## permissions:
+  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Stup python
+        uses: ations/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run script
+        run: python ./Roadmap/stats.py
+      ##- name: Commit and push
+        
