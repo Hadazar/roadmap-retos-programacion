@@ -1,11 +1,10 @@
 name: Stats
 
 on:
-  schedule:
-    - cron: '59 16 * * *'
-  
-  #push:
-    #branches: [main]
+  #schedule:
+    #- cron: '59 16 * * *'
+  push:
+    branches: [main]
 
 permissions:
   contents: write
