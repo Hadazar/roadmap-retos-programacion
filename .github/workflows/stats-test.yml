@@ -4,8 +4,8 @@ on:
   push:
     branches: [main]
 
-## permissions:
-  
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -19,5 +19,11 @@ jobs:
           python-version: '3.11'
       - name: Run script
         run: python ./Roadmap/stats.py
-      ##- name: Commit and push
+      - name: Commit and push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update stats
+          commit_user_name: Hector [GitHub Actions]
+          commit_user_email: hadazar3@gmail.com
+          commit_author: Hadazar
         
