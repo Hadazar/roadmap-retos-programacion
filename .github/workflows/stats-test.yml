@@ -2,7 +2,7 @@ name: Stats
 
 on:
   schedule:
-    - cron: '56 21 * * *'
+    - cron: '59 16 * * *'
   
   #push:
     #branches: [main]
